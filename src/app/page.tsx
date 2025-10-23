@@ -167,26 +167,25 @@ export default function HomePage() {
             <AboutText />
           </div>
           <div className="lg:col-span-5">
-            <ul className="grid sm:grid-cols-2 gap-3">
-              {[
-                ["Telefon", "+90 555 896 5990"],
-                ["Şehir", "İstanbul, Türkiye"],
-                ["E-posta", "benlisaid2@gmail.com"],
-                ["Durum", "Yeni projelere açık"],
-              ].map(([k, v]) => (
-                <li
-                  key={k}
-                  className="rounded-2xl border border-black/10 bg-white/70 p-4
-                             dark:border-white/10 dark:bg-white/5"
-                >
-                  <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                    {k}
-                  </div>
-                  <div className="font-semibold">{v}</div>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {[
+              [t("about.info.phoneLabel") || "Telefon", "+90 555 896 5990"],
+              [t("about.info.cityLabel") || "Şehir", t("about.info.cityValue") || "İstanbul, Türkiye"],
+              [t("about.info.emailLabel") || "E-posta", "benlisaid2@gmail.com"],
+              [t("about.info.statusLabel") || "Durum", t("about.info.statusValue") || "Yeni projelere açık"],
+            ].map(([k, v]) => (
+              <li
+                key={k as string}
+                className="rounded-2xl border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5"
+              >
+                <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                  {k}
+                </div>
+                <div className="font-semibold">{v as string}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
         </div>
       </Section>
 

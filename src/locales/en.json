@@ -8,14 +8,14 @@
   "hero": {
     "badgeLeft": "Portfolio",
     "badgeRight": "Developer",
-    "badgeL": "Portfolio",
-    "badgeR": "Developer",
     "greeting": "I'm",
     "title": "Said Benli",
     "subtitle": "I'm a developer focused on software development, AI, and data structures. Below is a selection of my projects and skills.",
     "ctaProjects": "View Projects",
     "ctaSkills": "Skills",
-    "ctaResume": "Resume"
+    "ctaResume": "Resume",
+    "ctaContact": "Contact",
+    "imageAlt": "Said Benli profile photo"
   },
   "about": {
     "title": "About Me",
@@ -23,7 +23,15 @@
     "p2": "I have project-based experience in OOP, database management, UI design and debugging. I also take courses in AI/ML/DL to advance my skills.",
     "p3": "Through these trainings I keep improving my understanding of modern development workflows and best practices.",
     "p4": "I comfortably follow technical documentation in English and work with C#, Java, HTML, CSS, JavaScript and SQL/relational databases.",
-    "p5": "I'm a quick learner, a team player and solution-oriented. I am open to new opportunities where I can contribute and grow."
+    "p5": "I'm a quick learner, a team player and solution-oriented. I am open to new opportunities where I can contribute and grow.",
+    "info": {
+      "phoneLabel": "Phone",
+      "cityLabel": "City",
+      "cityValue": "Istanbul, Turkey",
+      "emailLabel": "Email",
+      "statusLabel": "Status",
+      "statusValue": "Open to new projects"
+    }
   },
   "details": {
     "phone": "Phone",
@@ -58,7 +66,21 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "modal": { "title": "Get in touch" },
+    "formSubject": "Portfolio Contact Form",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "subject": "Subject (optional)",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Write your message...",
+    "notice": "This form is submitted via Formspree; the thank you page opens in a new tab.",
+    "altEmail": "Contact via email",
+    "altPhone": "+90 555 896 5990"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel"
   },
   "education": {
     "title": "Education",

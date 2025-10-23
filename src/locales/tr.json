@@ -8,14 +8,14 @@
   "hero": {
     "badgeLeft": "Portföy",
     "badgeRight": "Yazılımcı",
-    "badgeL": "Portföy",
-    "badgeR": "Yazılımcı",
     "greeting": "Ben",
     "title": "Said Benli",
     "subtitle": "Yazılım geliştirme, yapay zekâ ve veri yapıları odaklı bir geliştiriciyim. Aşağıda projelerim ve yeteneklerimden bir seçkiye göz atabilirsin.",
     "ctaProjects": "Projeleri Gör",
     "ctaSkills": "Beceriler",
-    "ctaResume": "Özgeçmiş"
+    "ctaResume": "Özgeçmiş",
+    "ctaContact": "İletişime Geç",
+    "imageAlt": "Said Benli profil fotoğrafı"
   },
   "about": {
     "title": "Hakkımda",
@@ -23,7 +23,15 @@
     "p2": "Nesne yönelimli programlama, veritabanı yönetimi, kullanıcı arayüzü tasarımı ve hata ayıklama gibi konularda proje bazlı deneyime sahibim. Ayrıca yapay zekâ, makine öğrenmesi ve derin öğrenme gibi ileri düzey alanlarda eğitimler alarak yetkinliğimi artırdım.",
     "p3": "Bu eğitimler sayesinde modern geliştirme süreçleri ve en iyi uygulamalar konusunda bilgi birikimimi sürekli güncelliyorum.",
     "p4": "Teknik dokümantasyonları rahatlıkla takip edebilecek İngilizce seviyesine sahibim. C#, Java, HTML, CSS, JavaScript ve SQL/ilişkisel veritabanları ile çalışıyorum.",
-    "p5": "Öğrenmeye açık, takım çalışmasına yatkın ve çözüm odaklıyım. Katkı sağlayabileceğim ve gelişebileceğim yeni fırsatlara açığım."
+    "p5": "Öğrenmeye açık, takım çalışmasına yatkın ve çözüm odaklıyım. Katkı sağlayabileceğim ve gelişebileceğim yeni fırsatlara açığım.",
+    "info": {
+      "phoneLabel": "Telefon",
+      "cityLabel": "Şehir",
+      "cityValue": "İstanbul, Türkiye",
+      "emailLabel": "E-posta",
+      "statusLabel": "Durum",
+      "statusValue": "Yeni projelere açık"
+    }
   },
   "details": {
     "phone": "Telefon",
@@ -58,7 +66,21 @@
     "email": "E-posta",
     "message": "Mesaj",
     "send": "Gönder",
-    "sending": "Gönderiliyor..."
+    "sending": "Gönderiliyor...",
+    "modal": { "title": "Benimle iletişime geç" },
+    "formSubject": "Portföy İletişim Formu",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "ornek@mail.com",
+    "subject": "Konu (opsiyonel)",
+    "subjectPlaceholder": "Konu",
+    "messagePlaceholder": "Mesajınızı yazın...",
+    "notice": "Bu form Formspree ile gönderilir; teşekkür sayfası yeni sekmede açılır.",
+    "altEmail": "E-posta ile iletişim",
+    "altPhone": "+90 555 896 5990"
+  },
+  "common": {
+    "close": "Kapat",
+    "cancel": "Vazgeç"
   },
   "education": {
     "title": "Eğitim",
