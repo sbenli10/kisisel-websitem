@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim",
+    "resume": "Özgeçmiş"
+  },
+  "hero": {
+    "badgeLeft": "Portföy",
+    "badgeRight": "Yazılımcı",
+    "badgeL": "Portföy",
+    "badgeR": "Yazılımcı",
+    "greeting": "Ben",
+    "title": "Said Benli",
+    "subtitle": "Yazılım geliştirme, yapay zekâ ve veri yapıları odaklı bir geliştiriciyim. Aşağıda projelerim ve yeteneklerimden bir seçkiye göz atabilirsin.",
+    "ctaProjects": "Projeleri Gör",
+    "ctaSkills": "Beceriler",
+    "ctaResume": "Özgeçmiş"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "p1": "Bilgisayar Bilimleri alanında lisans eğitimime devam etmekteyim. Yazılım geliştirme, veri yapıları, algoritmalar ve ağ güvenliği gibi temel alanlarda güçlü bir teknik altyapıya sahibim. Edindiğim teorik bilgileri, bireysel projeler ve uygulamalı eğitimlerle pekiştirerek pratiğe dönüştürüyorum.",
+    "p2": "Nesne yönelimli programlama, veritabanı yönetimi, kullanıcı arayüzü tasarımı ve hata ayıklama gibi konularda proje bazlı deneyime sahibim. Ayrıca yapay zekâ, makine öğrenmesi ve derin öğrenme gibi ileri düzey alanlarda eğitimler alarak yetkinliğimi artırdım.",
+    "p3": "Bu eğitimler sayesinde modern geliştirme süreçleri ve en iyi uygulamalar konusunda bilgi birikimimi sürekli güncelliyorum.",
+    "p4": "Teknik dokümantasyonları rahatlıkla takip edebilecek İngilizce seviyesine sahibim. C#, Java, HTML, CSS, JavaScript ve SQL/ilişkisel veritabanları ile çalışıyorum.",
+    "p5": "Öğrenmeye açık, takım çalışmasına yatkın ve çözüm odaklıyım. Katkı sağlayabileceğim ve gelişebileceğim yeni fırsatlara açığım."
+  },
+  "details": {
+    "phone": "Telefon",
+    "city": "Şehir",
+    "email": "E-posta",
+    "status": "Durum",
+    "statusOpen": "Yeni projelere açık",
+    "cityValue": "İstanbul, Türkiye"
+  },
+  "projects": {
+    "title": "Projeler",
+    "subtitle": "Seçili çalışmalarım",
+    "demo": "Canlı Demo",
+    "source": "Kaynak Kodu",
+    "items": {
+      "quiz": { "title": "Bilgi Yarışması", "desc": "Çoktan seçmeli soru motoru, zamanlayıcı ve puanlama ile." },
+      "checkers": { "title": "Dama Uygulaması", "desc": "Hamle doğrulama ve çok oyunculu mod." },
+      "inventory": { "title": "Stok Uygulaması", "desc": "CRUD, filtreleme ve raporlama." },
+      "carSite": { "title": "Araba Sitesi", "desc": "Araç listeleme ve detay sayfaları." }
+    }
+  },
+  "skills": {
+    "title": "Beceriler",
+    "langsDbs": "Diller ve Veritabanları",
+    "techs": "Teknolojiler & Frameworkler",
+    "tools": "Araçlar"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Benimle iletişime geç",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Gönder",
+    "sending": "Gönderiliyor..."
+  },
+  "education": {
+    "title": "Eğitim",
+    "school": "University of the People",
+    "program": "Bilgisayar Bilimleri Lisans Programı",
+    "dates": "Ekim 2023 – Devam Ediyor",
+    "relatedCourses": "İlgili Dersler",
+    "focusAreas": "Odak Alanlar",
+    "courses": {
+      "dev": "Yazılım Geliştirme",
+      "data": "Veri Yapıları",
+      "security": "Ağ Güvenliği",
+      "algorithms": "Algoritmalar",
+      "databases": "Veritabanı Sistemleri"
+    },
+    "focus": {
+      "oop": "Nesne Yönelimli Programlama",
+      "uiux_debug": "UI/UX ve Hata Ayıklama",
+      "ml_basics": "Makine Öğrenmesi Temelleri"
+    },
+    "certificatesTitle": "Kurs Sertifikaları",
+    "certs": {
+      "software": "Yazılım Uzmanlığı Eğitimi",
+      "english": "İngilizce Dil Sertifikası",
+      "ai": "Yapay Zeka ve Makine Öğrenmesi"
+    },
+    "actions": {
+      "view": "Sertifikayı Görüntüle",
+      "openNewTab": "Yeni sekmede aç",
+      "download": "İndir",
+      "close": "Kapat"
+    },
+    "count": "{{count}} adet"
+  },
+  "footer": {
+    "copyright": "Tüm hakları saklıdır.",
+    "location": "İstanbul, Türkiye"
+  }
+}

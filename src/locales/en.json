@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "badgeLeft": "Portfolio",
+    "badgeRight": "Developer",
+    "badgeL": "Portfolio",
+    "badgeR": "Developer",
+    "greeting": "I'm",
+    "title": "Said Benli",
+    "subtitle": "I'm a developer focused on software development, AI, and data structures. Below is a selection of my projects and skills.",
+    "ctaProjects": "View Projects",
+    "ctaSkills": "Skills",
+    "ctaResume": "Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I am pursuing a degree in Computer Science. I have a solid background in software development, data structures, algorithms, and network security. I turn theory into practice with personal projects and hands-on training.",
+    "p2": "I have project-based experience in OOP, database management, UI design and debugging. I also take courses in AI/ML/DL to advance my skills.",
+    "p3": "Through these trainings I keep improving my understanding of modern development workflows and best practices.",
+    "p4": "I comfortably follow technical documentation in English and work with C#, Java, HTML, CSS, JavaScript and SQL/relational databases.",
+    "p5": "I'm a quick learner, a team player and solution-oriented. I am open to new opportunities where I can contribute and grow."
+  },
+  "details": {
+    "phone": "Phone",
+    "city": "City",
+    "email": "Email",
+    "status": "Status",
+    "statusOpen": "Open to new projects",
+    "cityValue": "Istanbul, Turkey"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected work",
+    "demo": "Live Demo",
+    "source": "Source Code",
+    "items": {
+      "quiz": { "title": "Quiz App", "desc": "Multiple choice engine with timer and scoring." },
+      "checkers": { "title": "Checkers Game", "desc": "Move validation and multiplayer mode." },
+      "inventory": { "title": "Inventory App", "desc": "CRUD, filtering and reporting." },
+      "carSite": { "title": "Car Listing Site", "desc": "Vehicle listing and detail pages." }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "langsDbs": "Languages & Databases",
+    "techs": "Technologies & Frameworks",
+    "tools": "Tools"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with me",
+    "name": "Full Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "education": {
+    "title": "Education",
+    "school": "University of the People",
+    "program": "B.S. in Computer Science",
+    "dates": "Oct 2023 – Present",
+    "relatedCourses": "Relevant Courses",
+    "focusAreas": "Focus Areas",
+    "courses": {
+      "dev": "Software Development",
+      "data": "Data Structures",
+      "security": "Network Security",
+      "algorithms": "Algorithms",
+      "databases": "Database Systems"
+    },
+    "focus": {
+      "oop": "Object-Oriented Programming",
+      "uiux_debug": "UI/UX & Debugging",
+      "ml_basics": "Machine Learning Basics"
+    },
+    "certificatesTitle": "Course Certificates",
+    "certs": {
+      "software": "Software Specialization",
+      "english": "English Certificate",
+      "ai": "AI & Machine Learning"
+    },
+    "actions": {
+      "view": "View Certificate",
+      "openNewTab": "Open in new tab",
+      "download": "Download",
+      "close": "Close"
+    },
+    "count": "{{count}} items"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "location": "Istanbul, Turkey"
+  }
+}
