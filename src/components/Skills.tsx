@@ -50,7 +50,7 @@ export default function Skills() {
   ];
 
   const techs: Item[] = [
-    { label: ".NET", icon: "/img/NET.png" },
+    { label: ".NET", icon: "/img/net.png" },
     { label: "ASP.NET", icon: "/img/ASP.NET.png" },
     { label: "jQuery", icon: "/img/jQuery.jpeg" },
     { label: "Bootstrap", icon: "/img/Bootstrap.jpeg" },
