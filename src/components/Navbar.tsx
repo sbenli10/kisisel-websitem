@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
@@ -20,7 +19,7 @@ function NavLink({
     <a
       href={href}
       onClick={onClick}
-      className="transition-colors hover:text-slate-900/80 dark:hover:ext-slate-900 dark:text-slate-100/90"
+      className="transition-colors hover:text-slate-900/80 dark:hover:text-slate-200 dark:text-slate-100/90"
     >
       {children}
     </a>
@@ -47,7 +46,7 @@ export default function Navbar() {
           onClick={closeMenu}
           className="font-extrabold tracking-tight text-lg md:text-xl"
         >
-          Said&nbsp;Benli<span className="text-emerald-500 dark:text-emerald-400"></span>
+          Said&nbsp;Benli
         </Link>
 
         {/* Desktop */}

@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
+import { Suspense } from "react";
 
 import Navbar from "@/components/Navbar";
 import I18nProvider from "@/i18n/I18nProvider";
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           antialiased
         `}
       >
-        {/* Tema erken uygulanır */}
+        {/* Tema mümkün olduğunca erken uygulanır */}
         <ThemeScript />
 
         <ThemeProvider
@@ -46,25 +47,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <I18nProvider>
-            <Navbar />
-            <main>{children}</main>
+          {/* 🔐 useSearchParams/usePathname/useRouter kullanan her şey Suspense altında */}
+          <Suspense fallback={null}>
+            <I18nProvider>
+              <Navbar />
+              <main>{children}</main>
 
-            <footer className="border-t border-black/10 dark:border-white/10">
-              <div className="container mx-auto px-4 py-8 text-sm text-slate-600 dark:text-slate-400 flex flex-col md:flex-row items-center justify-between gap-2">
-                <p>© {new Date().getFullYear()} Said Benli</p>
-                <p>
-                  İstanbul ·{" "}
-                  <a
-                    className="underline decoration-dotted hover:text-slate-800 dark:hover:text-slate-200"
-                    href="#hero"
-                  >
-                    Yukarı
-                  </a>
-                </p>
-              </div>
-            </footer>
-          </I18nProvider>
+              <footer className="border-t border-black/10 dark:border-white/10">
+                <div className="container mx-auto px-4 py-8 text-sm text-slate-600 dark:text-slate-400 flex flex-col md:flex-row items-center justify-between gap-2">
+                  <p>© {new Date().getFullYear()} Said Benli</p>
+                  <p>
+                    İstanbul ·{" "}
+                    <a
+                      className="underline decoration-dotted hover:text-slate-800 dark:hover:text-slate-200"
+                      href="#hero"
+                    >
+                      Yukarı
+                    </a>
+                  </p>
+                </div>
+              </footer>
+            </I18nProvider>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
