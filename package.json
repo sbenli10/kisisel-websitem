@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run sync:docs && next dev",
-    "build": "npm run sync:docs && next build && next export",
+    "build": "next build",
     "sync:docs": "cpx \"docs/**/*\" public/docs"
   },
   "dependencies": {
