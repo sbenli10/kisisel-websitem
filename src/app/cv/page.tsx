@@ -1,4 +1,4 @@
-// src/app/cv/page.tsx (veya bulunduğu yer)
+// src/app/cv/page.tsx
 "use client";
 import { useState, useMemo } from "react";
 
@@ -6,11 +6,16 @@ type Lang = "TR" | "EN";
 
 export default function CVPage() {
   const [lang, setLang] = useState<Lang>("TR");
-  const pdfSrc = useMemo(() => (lang === "TR" ? "/docs/CV.pdf" : "/docs/MyCV_en.pdf"), [lang]);
+  const pdfSrc = useMemo(
+    () => (lang === "TR" ? "/docs/CV.pdf" : "/docs/MyCV_en.pdf"),
+    [lang]
+  );
 
-  // Navbar + başlık/padding için çıkaracağımız sabit (tasarıma göre 200–260px ideal)
-  const HEIGHT = "calc(100svh - 220px)";
-  const query = "#zoom=page-width&view=FitH&toolbar=1&navpanes=0";
+  // Navbar + başlık/padding payı kadar düş
+  const HEIGHT = "calc(100dvh - 220px)"; // <-- svh yerine dvh
+
+  // Not: iOS Safari iframe içindeki #zoom parametrelerini her zaman uygulamaz.
+  const query = "#toolbar=1&navpanes=0";
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -22,13 +27,17 @@ export default function CVPage() {
             <div className="inline-flex rounded-xl border border-white/10 p-1 bg-white/5">
               <button
                 onClick={() => setLang("TR")}
-                className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${lang === "TR" ? "bg-white/90 text-black" : "hover:bg-white/10"}`}
+                className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${
+                  lang === "TR" ? "bg-white/90 text-black" : "hover:bg-white/10"
+                }`}
               >
                 Türkçe
               </button>
               <button
                 onClick={() => setLang("EN")}
-                className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${lang === "EN" ? "bg-white/90 text-black" : "hover:bg-white/10"}`}
+                className={`px-3 py-1.5 rounded-lg text-sm font-semibold ${
+                  lang === "EN" ? "bg-white/90 text-black" : "hover:bg-white/10"
+                }`}
               >
                 English
               </button>
@@ -49,7 +58,10 @@ export default function CVPage() {
           <iframe
             title="Resume PDF"
             src={`${pdfSrc}${query}`}
-            className={`w-full h-[${HEIGHT}] md:h-[calc(100svh-240px)] border-0`}
+            className="w-full border-0 min-h-[60vh]"   // küçük bir güvenli alt sınır
+            // Tailwind yerine inline style ile yükseklik
+            style={{ height: HEIGHT }}
+            loading="lazy"
           />
         </div>
       </section>

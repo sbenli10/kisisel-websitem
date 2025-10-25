@@ -49,10 +49,9 @@ export default function Navbar() {
           Said&nbsp;Benli
         </Link>
 
-        {/* Desktop */}
         <div className="hidden sm:flex items-center gap-5">
           <NavLink href="#about">{t("nav.about")}</NavLink>
-          <NavLink href="#education">Eğitim</NavLink>
+          <NavLink href="#education">{t("nav.education")}</NavLink>   {/* <-- değişti */}
           <NavLink href="#projects">{t("nav.projects")}</NavLink>
           <NavLink href="#skills">{t("hero.ctaSkills")}</NavLink>
           <NavLink href="/cv">{t("nav.resume")}</NavLink>

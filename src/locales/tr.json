@@ -1,10 +1,11 @@
 {
   "nav": {
-    "about": "Hakkımda",
-    "projects": "Projeler",
-    "contact": "İletişim",
-    "resume": "Özgeçmiş"
-  },
+  "about": "Hakkımda",
+  "projects": "Projeler",
+  "contact": "İletişim",
+  "resume": "Özgeçmiş",
+  "education": "Eğitim"
+},
   "hero": {
     "badgeLeft": "Portföy",
     "badgeRight": "Yazılımcı",

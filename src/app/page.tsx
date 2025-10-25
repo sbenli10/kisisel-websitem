@@ -152,7 +152,7 @@ export default function HomePage() {
               src="/img/profil.jpeg"
               alt="Said Benli profil fotoğrafı"
               width={440}
-              height={440}
+              height={400}
               priority
               className="rounded-2xl shadow-2xl ring-1 ring-black/10 dark:ring-white/10"
             />

@@ -1,10 +1,11 @@
 {
   "nav": {
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact",
-    "resume": "Resume"
-  },
+  "about": "About",
+  "projects": "Projects",
+  "contact": "Contact",
+  "resume": "Resume",
+  "education": "Education"
+},
   "hero": {
     "badgeLeft": "Portfolio",
     "badgeRight": "Developer",
