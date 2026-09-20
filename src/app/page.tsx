@@ -53,6 +53,16 @@ export default function HomePage() {
         image: "/portfolio/arabaSitesi.png",
         tags: ["HTML", "Bootstrap"],
       },
+      {
+        title: t("projects.items.isgvizyon.title"),
+        image: "/img/isgviyon.jpg",
+        details: "isgvizyon",
+      },
+      {
+        title: t("projects.items.teklifbul.title"),
+        image: "/img/teklifbul.jpg",
+        details: "teklifbul",
+      },
     ],
     [t]
   );

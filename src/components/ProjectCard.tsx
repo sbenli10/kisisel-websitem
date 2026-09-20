@@ -1,19 +1,23 @@
 // src/components/ProjectCard.tsx
 import Image from "next/image";
+import DetailedProjectCard from "./DetailedProjectCard";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export type Project = {
   title: string;
-  desc: string;
+  desc?: string;
   demo?: string;
   source?: string;
   image?: string;
   tags?: string[];
+  details?: "isgvizyon" | "teklifbul";
 };
 
 export default function ProjectCard(props: Project) {
   const { title, desc, demo, source, image = "/portfolio/placeholder.png", tags = [] } = props;
   const { t } = useI18n();
+
+  if (props.details) return <DetailedProjectCard project={props.details} />;
 
   return (
     <article className="group rounded-2xl border border-black/10 bg-white/80 overflow-hidden
@@ -31,7 +35,7 @@ export default function ProjectCard(props: Project) {
 
       <div className="p-4">
         <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{desc}</p>
+        {desc && <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{desc}</p>}
 
         {!!tags.length && (
           <div className="mt-3 flex flex-wrap gap-2">
@@ -47,7 +51,7 @@ export default function ProjectCard(props: Project) {
           </div>
         )}
 
-        <div className="mt-4 flex gap-2">
+        {(demo || source) && <div className="mt-4 flex gap-2">
           {demo && (
             <a
               href={demo}
@@ -69,7 +73,7 @@ export default function ProjectCard(props: Project) {
               {t("projects.source")}
             </a>
           )}
-        </div>
+        </div>}
       </div>
     </article>
   );

@@ -49,6 +49,8 @@
     "demo": "Live Demo",
     "source": "Source Code",
     "items": {
+      "isgvizyon": { "title": "My İSGVİZYON Project" },
+      "teklifbul": { "title": "TeklifBul" },
       "quiz": { "title": "Quiz App", "desc": "Multiple choice engine with timer and scoring." },
       "checkers": { "title": "Checkers Game", "desc": "Move validation and multiplayer mode." },
       "inventory": { "title": "Inventory App", "desc": "CRUD, filtering and reporting." },

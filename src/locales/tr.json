@@ -49,6 +49,8 @@
     "demo": "Canlı Demo",
     "source": "Kaynak Kodu",
     "items": {
+      "isgvizyon": { "title": "İSGVİZYON Projem" },
+      "teklifbul": { "title": "TeklifBul" },
       "quiz": { "title": "Bilgi Yarışması", "desc": "Çoktan seçmeli soru motoru, zamanlayıcı ve puanlama ile." },
       "checkers": { "title": "Dama Uygulaması", "desc": "Hamle doğrulama ve çok oyunculu mod." },
       "inventory": { "title": "Stok Uygulaması", "desc": "CRUD, filtreleme ve raporlama." },
