@@ -9,10 +9,12 @@ import { useI18n } from "@/i18n/I18nProvider";
 function PDFModal({
   open,
   src,
+  title,
   onClose,
 }: {
   open: boolean;
   src: string;
+  title: string;
   onClose: () => void;
 }) {
   const { t } = useI18n();
@@ -34,12 +36,14 @@ function PDFModal({
   if (!open) return null;
 
   const query = "#zoom=page-width&view=FitH&toolbar=1&navpanes=0";
+  const isImage = /\.(jpe?g|png|webp)$/i.test(src);
 
   return (
     <div
       ref={backdropRef}
       role="dialog"
       aria-modal="true"
+      aria-label={title}
       className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
       onMouseDown={(e) => { if (e.target === backdropRef.current) onClose(); }}
     >
@@ -70,12 +74,26 @@ function PDFModal({
           </div>
         </div>
 
-        {/* PDF */}
+        {isImage ? (
+          <div className="h-[calc(100svh-120px)] pt-20 pb-4 px-4 md:h-[calc(100svh-140px)]">
+            <div className="relative h-full w-full">
+              <Image
+                src={src}
+                alt={title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-contain"
+                unoptimized
+              />
+            </div>
+          </div>
+        ) : (
         <iframe
-          title="Sertifika PDF"
+          title={title}
           src={`${src}${query}`}
           className="w-full h-[calc(100svh-120px)] md:h-[calc(100svh-140px)] border-0 pt-[48px]"
         />
+        )}
       </div>
     </div>
   );
@@ -90,6 +108,7 @@ export default function Education() {
     { title: t("education.certs.software") || "Yazılım Uzmanlığı Eğitimi", img: "/certificates/aribilgi.png", href: "/docs/KursSertifikasi.pdf" },
     { title: t("education.certs.english") || "İngilizce Dil Sertifikası",    img: "/certificates/publisher.jpg", href: "/docs/ENGL-certika.pdf" },
     { title: t("education.certs.ai")      || "Yapay Zeka ve Makine Öğrenmesi", img: "/certificates/oracle.png",    href: "/docs/oracle.pdf" },
+    { title: t("education.certs.javascript"), img: "/img/javascript.jpg", href: "/img/javascript-sertfika.jpg" },
   ];
 
   return (
@@ -119,7 +138,7 @@ export default function Education() {
                 {t("education.program") || "Bilgisayar Bilimleri Lisans Programı"}
               </div>
               <div className="font-semibold mt-1">
-                {t("education.dates") || "Ekim 2023 – Devam Ediyor"}
+                {t("education.dates") || "2026 – Mezuniyet"}
               </div>
 
               <div className="mt-4 grid sm:grid-cols-2 gap-3">
@@ -149,6 +168,21 @@ export default function Education() {
                   </ul>
                 </div>
               </div>
+              <button
+                type="button"
+                onClick={() => setActivePdf("/img/uopeople.png")}
+                className="mt-5 flex w-full items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left transition-colors hover:border-emerald-500 hover:bg-emerald-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-emerald-500 dark:hover:bg-emerald-500/10"
+              >
+                <span className="relative h-20 w-24 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <Image src="/img/uopeople.png" alt={t("education.diplomaTitle")} fill sizes="96px" className="object-contain p-1" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold text-slate-900 dark:text-slate-100">{t("education.diplomaTitle")}</span>
+                  <span className="mt-1 block text-xs text-slate-500 dark:text-slate-400">{t("education.school")}</span>
+                  <span className="mt-2 block text-sm font-medium text-emerald-700 dark:text-emerald-400">{t("education.actions.viewDiploma")}</span>
+                </span>
+                <span aria-hidden="true" className="text-emerald-600 dark:text-emerald-400">↗</span>
+              </button>
             </figcaption>
           </figure>
 
@@ -168,9 +202,11 @@ export default function Education() {
               {certs.map((c) => (
                 <button
                   key={c.title}
+                  type="button"
+                  disabled={!c.href}
                   onClick={() => setActivePdf(c.href)}
                   className="group text-left h-full rounded-2xl border border-black/10 bg-black/[0.04] hover:bg-black/10 transition
-                             overflow-hidden ring-1 ring-black/10
+                             overflow-hidden ring-1 ring-black/10 disabled:cursor-default disabled:hover:bg-black/[0.04]
                              dark:border-white/10 dark:bg-slate-900/40 dark:hover:bg-slate-900/55 dark:ring-white/5"
                 >
                   <div className="relative aspect-[16/10] bg-black/[0.02] dark:bg-white/[.04]">
@@ -185,7 +221,7 @@ export default function Education() {
                   <div className="p-4 flex flex-col gap-1 min-h-[92px]">
                     <div className="font-medium leading-snug line-clamp-2">{c.title}</div>
                     <div className="text-emerald-600 dark:text-emerald-400 text-sm">
-                      {t("education.actions.view") || "Sertifikayı Görüntüle"}
+                      {c.href ? t("education.actions.view") : t("education.actions.pending")}
                     </div>
                   </div>
                 </button>
@@ -195,7 +231,7 @@ export default function Education() {
         </div>
       </div>
 
-      <PDFModal open={!!activePdf} src={activePdf ?? ""} onClose={() => setActivePdf(null)} />
+      <PDFModal open={!!activePdf} src={activePdf ?? ""} title={activePdf === "/img/uopeople.png" ? t("education.diplomaTitle") : certs.find((c) => c.href === activePdf)?.title ?? ""} onClose={() => setActivePdf(null)} />
     </section>
   );
 }

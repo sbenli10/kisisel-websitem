@@ -26,6 +26,7 @@
     "p4": "I comfortably follow technical documentation in English and work with C#, Java, HTML, CSS, JavaScript and SQL/relational databases.",
     "p5": "I'm a quick learner, a team player and solution-oriented. I am open to new opportunities where I can contribute and grow.",
     "info": {
+      "profileLabel": "Profile and contact information",
       "phoneLabel": "Phone",
       "cityLabel": "City",
       "cityValue": "Istanbul, Turkey",
@@ -62,7 +63,11 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch with me",
+    "subtitle": "Let's work together",
+    "description": "Have a project in mind, a job opportunity, or a collaboration to discuss? Send me a message using the form or reach out directly by email.",
+    "directEmail": "Email me directly",
+    "formTitle": "Share your message",
+    "requiredNote": "All fields are required.",
     "name": "Full Name",
     "email": "Email",
     "message": "Message",
@@ -75,7 +80,7 @@
     "subject": "Subject (optional)",
     "subjectPlaceholder": "Subject",
     "messagePlaceholder": "Write your message...",
-    "notice": "This form is submitted via Formspree; the thank you page opens in a new tab.",
+    "notice": "The submission confirmation opens in a new tab.",
     "altEmail": "Contact via email",
     "altPhone": "+90 555 896 5990"
   },
@@ -103,13 +108,17 @@
       "ml_basics": "Machine Learning Basics"
     },
     "certificatesTitle": "Course Certificates",
+    "diplomaTitle": "University Graduation Diploma",
     "certs": {
       "software": "Software Specialization",
       "english": "English Certificate",
-      "ai": "AI & Machine Learning"
+      "ai": "AI & Machine Learning",
+      "javascript": "JavaScript Training"
     },
     "actions": {
       "view": "View Certificate",
+      "viewDiploma": "View Diploma",
+      "pending": "Certificate coming soon",
       "openNewTab": "Open in new tab",
       "download": "Download",
       "close": "Close"

@@ -20,12 +20,13 @@
   },
   "about": {
     "title": "Hakkımda",
-    "p1": "Bilgisayar Bilimleri alanında lisans eğitimime devam etmekteyim. Yazılım geliştirme, veri yapıları, algoritmalar ve ağ güvenliği gibi temel alanlarda güçlü bir teknik altyapıya sahibim. Edindiğim teorik bilgileri, bireysel projeler ve uygulamalı eğitimlerle pekiştirerek pratiğe dönüştürüyorum.",
+    "p1": "Bilgisayar Bilimleri alanında lisans eğitimimi 2026 yılında tamamlamadım. Yazılım geliştirme, veri yapıları, algoritmalar ve ağ güvenliği gibi temel alanlarda güçlü bir teknik altyapıya sahibim. Edindiğim teorik bilgileri, bireysel projeler ve uygulamalı eğitimlerle pekiştirerek pratiğe dönüştürüyorum.",
     "p2": "Nesne yönelimli programlama, veritabanı yönetimi, kullanıcı arayüzü tasarımı ve hata ayıklama gibi konularda proje bazlı deneyime sahibim. Ayrıca yapay zekâ, makine öğrenmesi ve derin öğrenme gibi ileri düzey alanlarda eğitimler alarak yetkinliğimi artırdım.",
     "p3": "Bu eğitimler sayesinde modern geliştirme süreçleri ve en iyi uygulamalar konusunda bilgi birikimimi sürekli güncelliyorum.",
     "p4": "Teknik dokümantasyonları rahatlıkla takip edebilecek İngilizce seviyesine sahibim. C#, Java, HTML, CSS, JavaScript ve SQL/ilişkisel veritabanları ile çalışıyorum.",
     "p5": "Öğrenmeye açık, takım çalışmasına yatkın ve çözüm odaklıyım. Katkı sağlayabileceğim ve gelişebileceğim yeni fırsatlara açığım.",
     "info": {
+      "profileLabel": "Profil ve iletişim bilgileri",
       "phoneLabel": "Telefon",
       "cityLabel": "Şehir",
       "cityValue": "İstanbul, Türkiye",
@@ -62,7 +63,11 @@
   },
   "contact": {
     "title": "İletişim",
-    "subtitle": "Benimle iletişime geç",
+    "subtitle": "Birlikte neler yapabiliriz?",
+    "description": "Proje fikirleri, iş fırsatları veya iş birlikleri için benimle iletişime geçebilirsiniz. Mesajınızı form üzerinden ya da doğrudan e-posta ile paylaşabilirsiniz.",
+    "directEmail": "Doğrudan e-posta",
+    "formTitle": "Mesajınızı paylaşın",
+    "requiredNote": "Tüm alanların doldurulması gereklidir.",
     "name": "Ad Soyad",
     "email": "E-posta",
     "message": "Mesaj",
@@ -75,7 +80,7 @@
     "subject": "Konu (opsiyonel)",
     "subjectPlaceholder": "Konu",
     "messagePlaceholder": "Mesajınızı yazın...",
-    "notice": "Bu form Formspree ile gönderilir; teşekkür sayfası yeni sekmede açılır.",
+    "notice": "Gönderim onayı yeni sekmede açılır.",
     "altEmail": "E-posta ile iletişim",
     "altPhone": "+90 555 896 5990"
   },
@@ -87,7 +92,7 @@
     "title": "Eğitim",
     "school": "University of the People",
     "program": "Bilgisayar Bilimleri Lisans Programı",
-    "dates": "Ekim 2023 – Devam Ediyor",
+    "dates": "2026 – Mezuniyet",
     "relatedCourses": "İlgili Dersler",
     "focusAreas": "Odak Alanlar",
     "courses": {
@@ -103,13 +108,17 @@
       "ml_basics": "Makine Öğrenmesi Temelleri"
     },
     "certificatesTitle": "Kurs Sertifikaları",
+    "diplomaTitle": "Üniversite Mezuniyet Diploması",
     "certs": {
       "software": "Yazılım Uzmanlığı Eğitimi",
       "english": "İngilizce Dil Sertifikası",
-      "ai": "Yapay Zeka ve Makine Öğrenmesi"
+      "ai": "Yapay Zeka ve Makine Öğrenmesi",
+      "javascript": "JavaScript Eğitimi"
     },
     "actions": {
       "view": "Sertifikayı Görüntüle",
+      "viewDiploma": "Diplomayı Görüntüle",
+      "pending": "Sertifika yakında eklenecek",
       "openNewTab": "Yeni sekmede aç",
       "download": "İndir",
       "close": "Kapat"

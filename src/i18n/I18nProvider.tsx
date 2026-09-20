@@ -19,6 +19,10 @@ type I18nCtx = {
 
 const Ctx = createContext<I18nCtx | null>(null);
 
+function isLang(value: unknown): value is Lang {
+  return value === "tr" || value === "en";
+}
+
 function deepGet(o: Dict, path: string) {
   return path.split(".").reduce((acc, k) => (acc && acc[k] !== undefined ? acc[k] : undefined), o);
 }
@@ -31,17 +35,37 @@ export default function I18nProvider({ children }: { children: React.ReactNode }
   const pathname = usePathname();
   const sp = useSearchParams();
 
-  const initial =
-    ((sp.get("lang") as Lang) ||
-      (typeof window !== "undefined" ? ((localStorage.getItem("lang") as Lang) || "tr") : "tr")) as Lang;
-
-  const [lang, _setLang] = useState<Lang>(initial);
+  const requestedLang = sp.get("lang");
+  // Keep the server and the first browser render identical.
+  const [lang, _setLang] = useState<Lang>(isLang(requestedLang) ? requestedLang : "tr");
+  const [preferenceLoaded, setPreferenceLoaded] = useState(false);
   const dict = useMemo(() => dictFor(lang), [lang]);
 
   useEffect(() => {
+    let next: Lang = "tr";
+    if (isLang(requestedLang)) {
+      next = requestedLang;
+    } else {
+      try {
+        const saved = localStorage.getItem("lang");
+        if (isLang(saved)) next = saved;
+      } catch {
+        // The site remains usable when browser storage is blocked.
+      }
+    }
+    _setLang(next);
+    setPreferenceLoaded(true);
+  }, [requestedLang]);
+
+  useEffect(() => {
+    if (!preferenceLoaded) return;
     document.documentElement.lang = lang;
-    localStorage.setItem("lang", lang);
-  }, [lang]);
+    try {
+      localStorage.setItem("lang", lang);
+    } catch {
+      // Persisting the preference is optional.
+    }
+  }, [lang, preferenceLoaded]);
 
   const setLang = (next: Lang) => {
     _setLang(next);

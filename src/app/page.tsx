@@ -166,26 +166,33 @@ export default function HomePage() {
           <div className="lg:col-span-7">
             <AboutText />
           </div>
-          <div className="lg:col-span-5">
-          <ul className="grid sm:grid-cols-2 gap-3">
-            {[
-              [t("about.info.phoneLabel") || "Telefon", "+90 555 896 5990"],
-              [t("about.info.cityLabel") || "Şehir", t("about.info.cityValue") || "İstanbul, Türkiye"],
-              [t("about.info.emailLabel") || "E-posta", "benlisaid2@gmail.com"],
-              [t("about.info.statusLabel") || "Durum", t("about.info.statusValue") || "Yeni projelere açık"],
-            ].map(([k, v]) => (
-              <li
-                key={k as string}
-                className="rounded-2xl border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5"
-              >
-                <div className="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                  {k}
+          <aside className="h-fit overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:col-span-5" aria-label={t("about.info.profileLabel")}>
+            <div className="border-b border-slate-200 bg-slate-50 px-6 py-6 dark:border-slate-800 dark:bg-slate-950/50 sm:px-8">
+              <p className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">Said Benli</p>
+              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t("hero.badgeRight")}</p>
+              <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+                {t("about.info.statusValue")}
+              </div>
+            </div>
+            <div className="px-6 py-6 sm:px-8">
+              <dl className="space-y-5">
+                <div>
+                  <dt className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">{t("about.info.cityLabel")}</dt>
+                  <dd className="mt-1.5 text-sm font-medium text-slate-900 dark:text-slate-100">{t("about.info.cityValue")}</dd>
                 </div>
-                <div className="font-semibold">{v as string}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
+                <div>
+                  <dt className="text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">{t("about.info.emailLabel")}</dt>
+                  <dd className="mt-1.5">
+                    <a href="mailto:benlisaid2@gmail.com" className="break-all rounded text-sm font-medium text-slate-900 underline-offset-4 hover:text-emerald-700 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-slate-100 dark:hover:text-emerald-400">benlisaid2@gmail.com</a>
+                  </dd>
+                </div>
+              </dl>
+              <a href="#contact" className="mt-6 flex min-h-11 items-center justify-between gap-3 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-800 transition-colors hover:border-emerald-500 hover:bg-emerald-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:border-slate-700 dark:text-slate-100 dark:hover:border-emerald-500 dark:hover:bg-emerald-500/10">
+                {t("hero.ctaContact")}<span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </aside>
         </div>
       </Section>
 
@@ -211,37 +218,52 @@ export default function HomePage() {
 
       {/* İLETİŞİM */}
       <Section id="contact" title={t("contact.title") || "İletişim"}>
-        <div className="rounded-2xl border border-black/10 bg-white/70 p-6
-                        dark:border-white/10 dark:bg-white/5">
-          <h3 className="font-semibold">
+        <div className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-5">
+          <div className="flex flex-col border-b border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950/50 sm:p-8 lg:col-span-2 lg:border-b-0 lg:border-r lg:p-10">
+          <span className="mb-6 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+            {t("details.statusOpen")}
+          </span>
+          <h3 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
             {t("contact.subtitle") || "Benimle iletişime geç"}
           </h3>
-          <p className="text-slate-600 dark:text-slate-300 mt-1">
-            E-posta, telefon veya form ile ulaşabilirsin.
+          <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">
+            {t("contact.description")}
           </p>
+          <div className="mt-8 border-t border-slate-200 pt-6 dark:border-slate-800 lg:mt-auto lg:pt-8">
+            <p className="mb-2 text-xs font-medium text-slate-500 dark:text-slate-400">{t("contact.directEmail")}</p>
+            <a href="mailto:benlisaid2@gmail.com" className="inline-flex max-w-full items-center gap-2 rounded text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-emerald-400">
+              <span className="break-all">benlisaid2@gmail.com</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          </div>
 
           <form
             action="https://formspree.io/f/xblorwln"
             method="POST"
             acceptCharset="UTF-8"
             target="_blank"
-            className="mt-4 space-y-3"
+            className="contact-form space-y-6 p-6 sm:p-8 lg:col-span-3 lg:p-10"
           >
-            <input type="hidden" name="_subject" value="Portföy İletişim Formu" />
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t("contact.formTitle")}</h3>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t("contact.requiredNote")}</p>
+            </div>
+            <input type="hidden" name="_subject" value={t("contact.formSubject")} />
             <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="c_name" className="block text-sm text-slate-500 dark:text-slate-400 mb-1">
                   {t("contact.name") || "Ad Soyad"}
                 </label>
-                <input id="c_name" name="name" required className="input" placeholder="Adınız" />
+                <input id="c_name" name="name" autoComplete="name" required className="input" placeholder={t("contact.namePlaceholder")} />
               </div>
               <div>
                 <label htmlFor="c_email" className="block text-sm text-slate-500 dark:text-slate-400 mb-1">
                   {t("contact.email") || "E-posta"}
                 </label>
-                <input id="c_email" type="email" name="email" required className="input" placeholder="ornek@mail.com" />
+                <input id="c_email" type="email" name="email" autoComplete="email" required className="input" placeholder={t("contact.emailPlaceholder")} />
               </div>
             </div>
 
@@ -249,27 +271,16 @@ export default function HomePage() {
               <label htmlFor="c_msg" className="block text-sm text-slate-500 dark:text-slate-400 mb-1">
                 {t("contact.message") || "Mesaj"}
               </label>
-              <textarea id="c_msg" name="message" required rows={5} className="input" placeholder="Mesajınızı yazın..." />
+              <textarea id="c_msg" name="message" required rows={6} className="input" placeholder={t("contact.messagePlaceholder")} />
             </div>
 
-            <div className="flex items-center gap-2 pt-1">
-              <button type="submit" className="btn btn-primary">
+            <div className="flex flex-col gap-4 border-t border-slate-100 pt-5 dark:border-slate-800 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-xs text-xs leading-5 text-slate-500 dark:text-slate-400">{t("contact.notice")}</p>
+              <button type="submit" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500">
                 {t("contact.send") || "Gönder"}
+                <span aria-hidden="true">↗</span>
               </button>
-              <a href="mailto:benlisaid2@gmail.com" className="btn btn-outline">
-                Email Gönder
-              </a>
-              <a
-                href="tel:+905558965990"
-                className="underline decoration-dotted hover:text-slate-800 dark:hover:text-slate-200"
-              >
-                +90 555 896 5990
-              </a>
             </div>
-
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Bu form Formspree ile gönderilir; teşekkür sayfası yeni sekmede açılır.
-            </p>
           </form>
         </div>
       </Section>
