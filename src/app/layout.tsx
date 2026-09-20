@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import I18nProvider from "@/i18n/I18nProvider";
 import { ThemeProvider } from "next-themes";
 import ThemeScript from "@/components/ThemeScript";
+import WelcomeScreen from "@/components/WelcomeScreen";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* 🔐 useSearchParams/usePathname/useRouter kullanan her şey Suspense altında */}
           <Suspense fallback={null}>
             <I18nProvider>
+              <WelcomeScreen>
               <Navbar />
               <main>{children}</main>
 
@@ -67,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </p>
                 </div>
               </footer>
+              </WelcomeScreen>
             </I18nProvider>
           </Suspense>
         </ThemeProvider>

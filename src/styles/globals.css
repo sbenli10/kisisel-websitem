@@ -8,6 +8,76 @@
 .dark { color-scheme: dark; }    /* <-- UA kontrolleri de tema ile eşitlenir */
 html { scroll-behavior: smooth; }
 
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #040b13;
+  color: #f1f1f2;
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+.welcome-mark {
+  position: absolute;
+  top: 8.5%;
+  left: 6%;
+  color: #9be4cc;
+}
+.welcome-copy {
+  position: absolute;
+  top: 31%;
+  left: 6%;
+  right: 6%;
+  z-index: 1;
+}
+.welcome-copy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5.3vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -.045em;
+}
+.welcome-copy p {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.8vw, 2rem);
+  font-weight: 300;
+  letter-spacing: .015em;
+}
+.welcome-enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.1rem;
+  margin-top: clamp(3.5rem, 16vh, 8rem);
+  border: 1px solid #a5ecd7;
+  border-radius: 999px;
+  padding: .6rem 1rem;
+  font-size: clamp(.6rem, .95vw, .8rem);
+  font-weight: 400;
+  letter-spacing: .025em;
+  transition: background .2s, color .2s;
+}
+.welcome-enter:hover { background: #a5ecd7; color: #040b13; }
+.welcome-enter:focus-visible { outline: 2px solid #a5ecd7; outline-offset: 6px; }
+.welcome-prism {
+  position: absolute;
+  width: clamp(220px, 29vw, 560px);
+  height: auto;
+  top: 26%;
+  right: -16%;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+@media (max-width: 600px) {
+  .welcome-mark { top: 7%; left: 7%; }
+  .welcome-copy { top: 30%; left: 7%; right: 7%; }
+  .welcome-copy h1 { max-width: 85%; font-size: clamp(2rem, 8vw, 3rem); }
+  .welcome-copy p { margin-top: 1.25rem; }
+  .welcome-prism { top: 51%; right: -110px; width: 250px; }
+  .welcome-enter { margin-top: 4rem; padding: .75rem 1rem; }
+}
+
 body {
   @apply bg-white text-slate-900 antialiased
          dark:bg-slate-950 dark:text-slate-100;
